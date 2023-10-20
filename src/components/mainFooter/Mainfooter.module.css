@@ -1,3 +1,6 @@
+.remove {
+  display: none;
+}
 .container {
   border: 1px red solid;
   height: 7rem;

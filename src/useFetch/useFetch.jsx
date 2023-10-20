@@ -6,7 +6,7 @@ const useFetch = (url) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
-  const [isLoding, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchRepo = async () => {
@@ -31,7 +31,7 @@ const useFetch = (url) => {
     return () => {};
   }, [navigate, url]);
 
-  return { data, error, isLoding };
+  return { data, error, isLoading };
 };
 
 export default useFetch;

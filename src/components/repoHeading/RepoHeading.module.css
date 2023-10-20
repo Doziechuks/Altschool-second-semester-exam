@@ -1,0 +1,50 @@
+.heading {
+  border: 1px red solid;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.heading h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.heading p {
+  line-height: 1.7rem;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: var(--smaller-bold);
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    margin-bottom: 2rem;
+  }
+  .heading h1 {
+    font-size: var(--sub-heading);
+    line-height: 2rem;
+  }
+  .heading p {
+    font-size: var(--mobile-paragraph);
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .heading h1 {
+    font-size: var(--paragraph);
+  }
+  .heading p {
+    font-size: var(--mobile-paragraph);
+    line-height: 1.5rem;
+  }
+}
