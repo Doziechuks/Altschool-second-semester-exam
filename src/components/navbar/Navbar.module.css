@@ -1,0 +1,6 @@
+.container {
+  border: 1px red solid;
+  color: var(--tertiary-color);
+  font-weight: var(--light-bold);
+  /* font-size: var(--sub-heading); */
+}
