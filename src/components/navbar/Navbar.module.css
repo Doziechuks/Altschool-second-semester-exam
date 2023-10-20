@@ -1,6 +1,36 @@
 .container {
   border: 1px red solid;
-  color: var(--tertiary-color);
-  font-weight: var(--light-bold);
-  /* font-size: var(--sub-heading); */
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: var(--second-background);
+}
+.container a h2 {
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 0.2rem;
+  user-select: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.container div {
+  color: var(--text-color);
+  user-select: none;
+  font-weight: var(--smaller-bold);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+    height: 3.5rem;
+  }
+  .container a h2 {
+    font-size: var(--mobile-sub-heading);
+  }
+  .container div {
+    font-size: var(--mobile-paragragh);
+  }
 }
