@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar, Spinner } from "./components";
 
 const Repos = lazy(() => import("./pages/repos/Repos"));
 const SingleRepo = lazy(() => import("./pages/singleRepo/SingleRepo"));
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route exact path="/" element={<Repos />} />
           <Route path="/doziechuks/:id" element={<SingleRepo />} />

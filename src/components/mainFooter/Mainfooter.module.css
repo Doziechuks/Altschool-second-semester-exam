@@ -2,7 +2,7 @@
   display: none;
 }
 .container {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   height: 7rem;
   display: flex;
   align-items: center;

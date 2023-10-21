@@ -17,7 +17,7 @@ const useFetch = (url) => {
           setData(data);
         }
       } catch (error) {
-        if (error.response.status === 404) {
+        if (error?.response?.status === 404) {
           navigate("/*");
         } else {
           setError(true);

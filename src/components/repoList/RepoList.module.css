@@ -1,5 +1,5 @@
 .container {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,8 @@
   border-right: 2px var(--primary-color) solid;
   font-size: var(--main-heading);
   color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2rem;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -29,7 +31,7 @@
 
   10%,
   100% {
-    width: 16rem;
+    width: 16.5rem;
   }
 }
 @keyframes blinking {
@@ -47,12 +49,20 @@
   }
 }
 .container .cardWrapper {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 2rem;
   column-gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.container .paginationBox {
+  /* border: 1px red solid; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 1025px) {
@@ -80,7 +90,7 @@
 
     10%,
     100% {
-      width: 12.2rem;
+      width: 13.2rem;
     }
   }
 }
@@ -96,7 +106,7 @@
 
     10%,
     100% {
-      width: 8.2rem;
+      width: 9.8rem;
     }
   }
 }

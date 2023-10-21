@@ -3,17 +3,28 @@ import styles from "./RepoCard.module.css";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import LinkIcon from "@mui/icons-material/Link";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import DoDisturb from "@mui/icons-material/DoDisturb";
 // import { data } from "../../dummy";
 
 const RepoCard = ({ data }) => {
-  const [notice] = useState(false);
-  const repoUrl = data?.url + data?.name;
-  const projectUrl = data?.homepage ? `https://${data?.homepage}` : notice;
+  const [notice, setNotice] = useState(false);
+  const repoUrl = "https://github.com/Doziechuks/" + data?.name;
+  // const projectUrl = data?.homepage ? `https://${data?.homepage}` : notice;
 
-  console.log({ notice });
+  const handleNoLink = () => {
+    setNotice(true);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setNotice(false);
+    }, 3000);
+  }, [notice]);
+
   return (
     <div className={styles.wrapper}>
+      {notice && <span>no link</span>}
       <div className={styles.top}>
         <div className={styles.avatarLang}>
           <span className={styles.language}>{data.language}</span>
@@ -34,14 +45,20 @@ const RepoCard = ({ data }) => {
         >
           <LinkIcon />
         </a>
-        <a
-          href={data?.homepage ? projectUrl : null}
-          target="blank"
-          title="Visit live project"
-          rel="noopener noreferrer"
-        >
-          <OpenInNewIcon />
-        </a>
+        {data?.homepage ? (
+          <a
+            href={data?.homepage}
+            target="blank"
+            title="Visit live project"
+            rel="noopener noreferrer"
+          >
+            <OpenInNewIcon />
+          </a>
+        ) : (
+          <div className={styles.noLink} onClick={handleNoLink}>
+            <DoDisturb />
+          </div>
+        )}
       </div>
     </div>
   );
