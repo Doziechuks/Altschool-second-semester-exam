@@ -6,8 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
-  /* background-color: var(--backgound-color); */
-  background-color: #fff;
+  background-color: whitesmoke;
   box-shadow: 0 0.3em 0.1em rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;

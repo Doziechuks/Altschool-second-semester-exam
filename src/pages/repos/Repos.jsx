@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Repos.module.css";
-import { Heading, RepoList, ErrorBoundary } from "../../components";
+import { Heading, RepoList } from "../../components";
 import { Seo } from "../../utility/seo";
 
 const Repos = () => {
@@ -12,12 +12,10 @@ const Repos = () => {
     });
   }, []);
   return (
-    <ErrorBoundary>
-      <main className={styles.container}>
-        <Heading />
-        <RepoList />
-      </main>
-    </ErrorBoundary>
+    <main className={styles.container}>
+      <Heading />
+      <RepoList />
+    </main>
   );
 };
 

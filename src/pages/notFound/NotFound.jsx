@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./NotFound.module.css";
+import { Seo } from "../../utility/seo";
 
 const NotFound = () => {
+  useEffect(() => {
+    Seo({
+      title: "Error 404",
+      metaDescription: "Error occured because this page was not found",
+    });
+  }, []);
   return (
     <main className={styles.container}>
       <div className={styles.title}>

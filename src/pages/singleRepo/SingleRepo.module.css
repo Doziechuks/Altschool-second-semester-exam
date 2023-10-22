@@ -1,4 +1,135 @@
 .container {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  /* justify-content: center; */
+}
+.container .heading {
+  /* border: 1px red solid; */
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.heading p,
+.heading span {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+.heading p::first-letter {
+  text-transform: uppercase;
+}
+.heading span a {
+  display: inline;
+  font-weight: var(--smaller-bold);
+  color: var(--primary-color);
+}
+.container .detailsBox {
+  /* border: 1px red solid; */
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.detailsBox h3 {
+  /* border: 1px red solid; */
+  width: 100%;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  /* text-align: center; */
+}
+.detailsBox ul {
+  /* border: 1px red solid; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+ul li:last-child {
+  margin-bottom: 0;
+}
+li span {
+  font-weight: var(--more-bold);
+  text-transform: capitalize;
+  /* color: var(--secondary-color); */
+}
+li a {
+  display: inline;
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+li .noUrl {
+  font-weight: normal;
+}
+@media screen and (max-width: 1024px) {
+  .container .heading {
+    max-width: 100%;
+  }
+  .container .detailsBox {
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .detailsBox {
+    /* border: 1px red solid; */
+    max-width: 100%;
+  }
+  .detailsBox h3 {
+    text-align: center;
+  }
+  .detailsBox ul {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading h1 {
+    font-size: var(--sub-heading);
+    line-height: 2rem;
+  }
+  .heading p {
+    font-size: var(--mobile-paragraph);
+    line-height: 1.5rem;
+  }
+  .detailsBox h3 {
+    font-size: 1.2rem;
+  }
+  ul li {
+    font-size: var(--mobile-paragraph);
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .heading h1 {
+    font-size: var(--paragraph);
+  }
+  .heading p {
+    font-size: var(--mobile-paragraph);
+    line-height: 1.5rem;
+  }
 }

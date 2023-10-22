@@ -1,10 +1,10 @@
+import { useState } from "react";
 import styles from "./RepoList.module.css";
 import RepoCard from "../repoCard/RepoCard";
 import useFetch from "../../useFetch/useFetch";
 import { Pagination } from "@mui/material";
-import { useState } from "react";
 import Spinner from "../spinner/Spinner";
-// import { data } from "../../dummy";
+import Error from "../../pages/error/Error";
 
 const RepoList = () => {
   const { data, isLoading, error } = useFetch("/user/repos");
@@ -22,7 +22,7 @@ const RepoList = () => {
   };
 
   if (isLoading) return <Spinner />;
-  if (error) return <h1>something went wrong</h1>;
+  if (error) return <Error />;
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Repository List</h2>

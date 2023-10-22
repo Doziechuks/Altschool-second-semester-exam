@@ -9,22 +9,26 @@ import DoDisturb from "@mui/icons-material/DoDisturb";
 
 const RepoCard = ({ data }) => {
   const [notice, setNotice] = useState(false);
-  const repoUrl = "https://github.com/Doziechuks/" + data?.name;
-  // const projectUrl = data?.homepage ? `https://${data?.homepage}` : notice;
+  // const repoUrl = "https://github.com/Doziechuks/" + data?.name;
+  const projectUrl = `https://${data?.homepage}`;
 
   const handleNoLink = () => {
     setNotice(true);
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setNotice(false);
-    }, 3000);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [notice]);
 
   return (
     <div className={styles.wrapper}>
-      {notice && <span>no link</span>}
+      {notice && (
+        <span className={styles.noLink}>no project link available.</span>
+      )}
       <div className={styles.top}>
         <div className={styles.avatarLang}>
           <span className={styles.language}>{data.language}</span>
@@ -38,7 +42,7 @@ const RepoCard = ({ data }) => {
       </div>
       <div className={styles.bottom}>
         <a
-          href={repoUrl}
+          href={data?.html_url}
           target="blank"
           title="Visit repo on Github"
           rel="noopener noreferrer"
@@ -47,7 +51,7 @@ const RepoCard = ({ data }) => {
         </a>
         {data?.homepage ? (
           <a
-            href={data?.homepage}
+            href={projectUrl}
             target="blank"
             title="Visit live project"
             rel="noopener noreferrer"

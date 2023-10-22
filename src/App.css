@@ -10,3 +10,7 @@
   text-decoration: none;
   display: block;
 }
+
+body {
+  background-color: whitesmoke;
+}

@@ -7,6 +7,15 @@
   /* background-color: var(--backgound-color); */
   overflow: hidden;
 }
+.wrapper .noLink {
+  /* border: 1px red solid; */
+  color: red;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: var(--smaller-bold);
+  text-align: center;
+  padding-top: 1rem;
+}
 .wrapper .top {
   /* border: 1px red solid; */
   border-bottom: 1px var(--backgound-color) solid;

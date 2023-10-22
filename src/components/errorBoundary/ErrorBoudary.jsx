@@ -1,6 +1,5 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import styles from "./ErrorBoundary.module.css";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -10,11 +9,12 @@ class ErrorBoundary extends Component {
 
   componentDidCatch() {
     this.setState({ hasError: true });
+    this.props.navigate("/error");
   }
 
   render() {
     if (this.state.hasError) {
-      return <div className={styles.container}>Something went wrong.</div>;
+      return null;
     }
 
     return this.props.children;
@@ -23,6 +23,7 @@ class ErrorBoundary extends Component {
 
 ErrorBoundary.propTypes = {
   children: PropTypes.node,
+  navigate: PropTypes.func.isRequired,
 };
 
 export default ErrorBoundary;
