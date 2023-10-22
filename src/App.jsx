@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import { ErrorBoundary, Navbar, Spinner } from "./components";
+import { ErrorBoundary, Navbar, Spinner, Footer } from "./components";
 
 const Repos = lazy(() => import("./pages/repos/Repos"));
 const SingleRepo = lazy(() => import("./pages/singleRepo/SingleRepo"));
@@ -23,7 +23,7 @@ function App() {
           </Routes>
         </ErrorBoundary>
       </Suspense>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

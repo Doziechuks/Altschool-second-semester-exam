@@ -1,4 +1,4 @@
-# An API fFetch Of My Github Portfolio
+# An API Fetch Of My Github Portfolio
 
 This is an Altschool second semester project based exam for the Verion two(2) of the Altschool Frontend Track of the school of Software engineering.
 
