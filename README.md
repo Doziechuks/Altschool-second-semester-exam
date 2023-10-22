@@ -29,4 +29,4 @@ This project was built with Reactjs, A JavaScript Frontend Library. The styling 
 ## Useful Links
 
 - [GitHub](https://github.com/Doziechuks/Altschool-second-semester-exam)
-- [Live link](https://circle-22-calculator-project.netlify.app/)
+- [Live link](https://altschool-second-semester-exam-eta.vercel.app/)
